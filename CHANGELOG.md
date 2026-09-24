@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/ganexcloud/terraform-aws-athena/compare/v1.0.1...v2.0.0) (2026-09-24)
+
+### ⚠ BREAKING CHANGES
+
+* **terraform:** Terraform versions below 1.6.0 and AWS provider 4.x are no longer supported.
+
+### Features
+
+* **terraform:** modernize module for terraform 1.15 ([fc01bba](https://github.com/ganexcloud/terraform-aws-athena/commit/fc01bbab42d8ae5047460b3e8aefd5c021748e00))
+
 ## [1.0.1](https://github.com/ganexcloud/terraform-aws-athena/compare/v1.0.0...v1.0.1) (2026-08-06)
 
 ### Bug Fixes
