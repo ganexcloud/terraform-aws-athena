@@ -3,24 +3,18 @@
 Contributions that improve this Terraform module are welcome. Please keep each
 change focused, documented, and validated before opening a pull request.
 
-## Prerequisites
-
-- The Terraform version declared in `.terraform-version`.
-- Docker, used by the `terraform-docs` pre-commit hook.
-- Python with `pre-commit` installed. For example: `pipx install pre-commit`.
-
 ## Local validation
 
-Before opening a pull request, run:
+Pull requests are validated by the `validate` workflow. Run the same checks locally with Terraform 1.15.8 before opening a pull request:
 
-```shell
-tfswitch
+```sh
+terraform fmt -check -recursive
+terraform init -backend=false
+terraform validate
 pre-commit run --all-files
 ```
 
-The command formats Terraform, validates the root module, runs TFLint, checks
-for credentials, and refreshes generated Terraform documentation in
-`README.md`. Do not manually edit content between Terraform Docs markers.
+Docker is required by the `terraform-docs` pre-commit hook. Do not manually edit content between Terraform Docs markers.
 
 ## Pull requests
 
