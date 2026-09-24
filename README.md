@@ -1,20 +1,32 @@
+# terraform-aws-athena
+
+Terraform module that provisions an Athena workgroup, databases, data catalogs and named queries, with an optional S3 bucket for query results.
+
 ## Compatibility
 
-This module requires Terraform 0.13.1 or later. Older Terraform versions are not supported.
+This module requires Terraform 1.6.0 or later and supports AWS provider versions from 5.40.0 up to, but not including, 7.0.0.
+
+## Example
+
+See [`examples/complete`](examples/complete).
+
+## Existing result bucket
+
+Set `create_s3_bucket = false` and provide `athena_s3_bucket_id` to use an existing bucket for Athena query results. The module does not manage that bucket.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.40.0, < 7.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.40.0, < 7.0.0 |
 
 ## Modules
 
